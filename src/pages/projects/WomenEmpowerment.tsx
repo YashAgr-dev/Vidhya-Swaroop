@@ -236,7 +236,7 @@ export default function WomenEmpowerment() {
                   Support Women
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full px-8 border-white/30 text-white hover:bg-white/10">
+              <Button asChild size="lg" className="rounded-full px-8 bg-white text-rose-600 hover:bg-white/90 shadow-xl">
                 <Link to="/contact">
                   Get in Touch
                 </Link>
