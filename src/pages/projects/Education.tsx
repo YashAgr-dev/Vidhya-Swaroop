@@ -92,6 +92,29 @@ export default function Education() {
           </motion.div>
         </div>
       </section>
+      <section className="py-20 bg-card">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="p-10 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-full blur-3xl" />
+              <div className="relative">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-6 shadow-lg">
+                  <Heart className="h-8 w-8 text-white" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground mb-4">Legacy We Carry</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We serve an educator with 40+ years of experience in primary education, passionate about making learning joyful and effective for children.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Core Subjects - Bento Grid */}
       <section className="py-20 bg-background">

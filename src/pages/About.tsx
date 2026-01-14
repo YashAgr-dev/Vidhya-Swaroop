@@ -12,11 +12,11 @@ const inspirations = [
 const leadership = {
   presidents: [
     { name: "Mr. Vikas Agarwal", role: "President" },
-    { name: "Mrs. Monika Agarwal", role: "President" },
+    { name: "Mrs. Monika Agarwal (Secretary)", role: "Secretary" },
   ],
   trustees: [
     { name: "Shivani Agarwal", role: "Trustee" },
-    { name: "Shakshi Agarwal", role: "Trustee" },
+    { name: "Sakshi Agarwal", role: "Trustee" },
   ],
 };
 

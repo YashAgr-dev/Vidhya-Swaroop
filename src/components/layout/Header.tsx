@@ -12,8 +12,8 @@ const navigation = [
     href: "#",
     children: [
       { name: "Education", href: "/projects/education", emoji: "📚" },
+      { name: "Women Skill Development", href: "/projects/women-empowerment", emoji: "✨" },
       { name: "Healthcare", href: "/projects/health", emoji: "🏥" },
-      { name: "Women Empowerment", href: "/projects/women-empowerment", emoji: "✨" },
     ],
   },
   { name: "About", href: "/about" },
