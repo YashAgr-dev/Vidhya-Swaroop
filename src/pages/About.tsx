@@ -22,9 +22,9 @@ const leadership = {
 };
 
 const supporters = [
-  { name: "Bharat Vikas Parishad Annapurna", image: "src/assets/Annapurna.png", description: "A leading organization dedicated to national development through education, health, and social service initiatives across India." },
+  { name: "Bharat Vikas Parishad Annapurna", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/Annapurna.png", description: "A leading organization dedicated to national development through education, health, and social service initiatives across India." },
   { name: "India Rising", image: "", description: "Empowering communities through sustainable development programs, skill training, and grassroots social transformation." },
-  { name: "Lions Club Supreme", image: "src/assets/lionsking.jpeg", description: "International humanitarian organization serving communities through vision care, hunger relief, and youth programs." },
+  { name: "Lions Club Supreme", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/lionsking.jpeg", description: "International humanitarian organization serving communities through vision care, hunger relief, and youth programs." },
   { name: "State Bank of India", image: "", description: "India's largest public sector bank, supporting educational initiatives and financial literacy programs nationwide." },
 ];
 
