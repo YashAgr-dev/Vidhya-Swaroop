@@ -8,7 +8,7 @@ const donationAmounts = [500, 1000, 2500, 5000, 10000, 25000];
 
 const impactStats = [
   { number: "100+", label: "Students Educated", icon: Users, color: "from-blue-500 to-indigo-600" },
-  { number: "4867+", label: "Items Donated", icon: HandHeart, color: "from-rose-500 to-pink-600" },
+  { number: "1267+", label: "Items Donated", icon: HandHeart, color: "from-rose-500 to-pink-600" },
   { number: "3", label: "Generations", icon: Heart, color: "from-amber-500 to-orange-600" },
   { number: "₹Chips", label: "Education Cost", icon: Banknote, color: "from-emerald-500 to-teal-600" },
 ];
@@ -17,21 +17,13 @@ const valuedSupporters = [
   { name: "Bharat Vikas Parishad Annapurna", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/Annapurna.png", description: "A leading organization dedicated to national development through education, health, and social service initiatives across India." },
   { name: "India Rising", image: "https://lh3.googleusercontent.com/rd-d/ALs6j_G7mSiblyrSkOumO6vGAsfR3SDchVkNA_GuJg4RDFm9c7DUYysDLG3XabLGv6-aKUwDbMEEZBBFsokrVXx_XGS6RPoglV61jbys74E_1uNCH4R7lViLNOI0JzEwYWRH9RRaMeKCXKUJ752ahYPcbtGH4LOv4J75Io42QP3oCsEqSf-6CZ_BrLOaiTz40vWHkyrCUAovyrCt6LmjLnyki8bJ_G6eeWedX1L_YZ_xaQO3jQSyhIbIaorjb7NXBp2ST_ssncIBSYLpdp0BvANzA3RMxRDqMHA4icxjy5RL_Jiaol-yfbDreZOY1qG0RqVnoiJhaqBzqcQmwCmzNSX5cZxVJImtt2JtA0rs5toZeSAewcwJjmemS1DfGMtKJSNVzwZXBTEXiIFy7yjFKA6YttFJ019DhlofEoATSJFvdWbRKw1PVc5Js3KxdDrlGIRGCQiVZpYquJKJQWF975Khr2TVod2AJ8HKIJvr8vEEzr2aDgHCDKNPHMjP8gocvGvkB7DphUrqV1oM0ffWqIQFrJAH7o354ZApun-I1sPd44lDcniwW67bgj1luahp1amox5Vb9VvOd5V1q9-elC0jvCUjNBQXndH7i-HcbnI5NUBCcSn07tAGYY7S7qOqa0cGPpMTs4En_cM6V3jgsJVMfjGqrxMIN3Dpso6CXHPtsqLcY86u193pIgPHbYLR6718sF2r-bEsN7WcTc6Mi1MrWXO0H1zziW4I9RRSalkv_q-4vc-8vhZ2ZJfeXiHGTXRxDS7T1h_4LW0-5mT3cod20Ex-YZKYjWDuaKl9yxRla6cx763GC08EoZFCaEiEIddH-l_NAm3GfBplI9Yg2QeQcKSjLfObj1pGWM_lBLyCU6m05RQ8Au7mz18uoEP40_ynviF9ThrFuKaLu4R9HC-smBl4dkVCncybvV66c_tso7dDysJTg6ePJBio0Nptxfkn4KbZoDz6eSL-ZdRzDZdGDQC2rC-z8oKBlz0ZK92CNw8cTt7l37mh1IlW0sCrm6ulvaASd7yhLWk_sy3VHo0u=w1920-h868?auditContext=prefetch", description: "Empowering communities through sustainable development programs, skill training, and grassroots social transformation." },
   {name: "Lions Club Supreme", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/lionsking.jpeg", description: "International humanitarian organization serving communities through vision care, hunger relief, and youth programs." },
-  { name: "State Bank of India", image: "", description: "India's largest public sector bank, supporting educational initiatives and financial literacy programs nationwide." },
 ];
 const constantSupporters = [
-  { name: "Navagarwal Mahila Munch" },
   { name: "Agarwal Mahila Munch" },
-  { name: "Eco Friends Community" },
-  { name: "Sunita Gupta" },
-  { name: "Vikram Singh" },
-  { name: "Neha Verma" },
-  { name: "Rohit Agarwal" },
-  { name: "Kavita Joshi" },
-  { name: "Suresh Reddy" },
-  { name: "Meera Nair" },
-  { name: "Ankit Mishra" },
-  { name: "Pooja Saxena" },
+  { name: "Eco friends Welfare Society" },
+  { name: "Hari Bol Seva Samiti" },
+  { name: "Nav Agarwal Samaj" },
+  { name: "Shikar Club" },
 ];
 const benefits = [
   "Quality education at minimal cost",
