@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Heart, Sparkles } from "lucide-react";
+import { Menu, X, ChevronDown, Heart, Sparkles, HandHeart } from "lucide-react"; // Added HandHeart
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.jpg";
@@ -16,6 +16,7 @@ const navigation = [
       { name: "Healthcare", href: "/projects/health", emoji: "🏥" },
     ],
   },
+  { name: "Campaigns", href: "/campaigns" },
   { name: "About", href: "/about" },
   { name: "Support", href: "/support" },
   { name: "Contact", href: "/contact" },
@@ -107,6 +108,15 @@ export function Header() {
 
           {/* Right Side */}
           <div className="flex items-center gap-3">
+            {/* Volunteer Button - Desktop */}
+            <Button asChild className="hidden sm:flex rounded-full px-6 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all shine bg-secondary text-secondary-foreground hover:bg-secondary/80">
+              <Link to="/contact">
+                <HandHeart className="h-4 w-4 mr-2" />
+                Volunteer
+              </Link>
+            </Button>
+
+            {/* Donate Button - Desktop */}
             <Button asChild className="hidden sm:flex rounded-full px-6 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all shine">
               <Link to="/support">
                 <Heart className="h-4 w-4 mr-2" />
@@ -183,7 +193,17 @@ export function Header() {
                   </Link>
                 )
               )}
-              <div className="pt-4 mt-4 border-t border-border">
+              
+              <div className="pt-4 mt-4 border-t border-border space-y-3">
+                {/* Volunteer Button - Mobile */}
+                <Button asChild className="w-full rounded-xl h-12 text-base shine bg-secondary text-secondary-foreground hover:bg-secondary/80" size="lg">
+                  <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+                    <HandHeart className="h-5 w-5 mr-2" />
+                    Volunteer
+                  </Link>
+                </Button>
+
+                {/* Donate Button - Mobile */}
                 <Button asChild className="w-full rounded-xl h-12 text-base shine" size="lg">
                   <Link to="/support" onClick={() => setMobileMenuOpen(false)}>
                     <Heart className="h-5 w-5 mr-2" />

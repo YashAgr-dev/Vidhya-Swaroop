@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
-import { Stethoscope, Heart, Target, Activity, Pill, BookOpen, Users, Home, Sprout, HandHeart, Award, CheckCircle, Syringe, SmilePlus, ShieldCheck } from "lucide-react";
+import { Stethoscope, Heart, Target, Activity, Pill, BookOpen, Users, Home, Sprout, HandHeart, Award, CheckCircle, Syringe, SmilePlus, ShieldCheck, Camera } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { AnimatedHealthIllustration } from "@/components/illustrations/AnimatedHealthIllustration";
+import { FloatingElements } from "@/components/illustrations/FloatingElements";
+import { GalleryGrid } from "@/components/GalleryLightbox";
 
 const campaigns = [
   {
@@ -66,14 +69,32 @@ const impacts = [
   { number: "50+", label: "Volunteers" },
 ];
 
+// Placeholder gallery images - replace with actual health camp images
+// remove alt text like "Health camp photo 1" and add meaningful descriptions
+
+const healthGallery = [
+  { src: "https://raw.githubusercontent.com/vp007-dev/community-care-hub/refs/heads/main/src/assets/WhatsApp%20Image%202026-01-14%20at%204.37.16%20PM.jpeg", alt: "" },
+  { src: "https://raw.githubusercontent.com/vp007-dev/community-care-hub/refs/heads/main/src/assets/WhatsApp%20Image%202026-01-14%20at%204.37.15%20PM.jpeg", alt: "" },
+  { src: "https://raw.githubusercontent.com/vp007-dev/community-care-hub/refs/heads/main/src/assets/WhatsApp%20Image%202026-01-14%20at%204.37.20%20PM.jpeg", alt: "" },
+  { src: "https://raw.githubusercontent.com/vp007-dev/community-care-hub/refs/heads/main/src/assets/health.jpeg", alt: "" },
+  { src: "https://raw.githubusercontent.com/vp007-dev/community-care-hub/refs/heads/main/src/assets/health1.jpeg", alt: "" },
+  { src: "https://raw.githubusercontent.com/vp007-dev/community-care-hub/refs/heads/main/src/assets/health2.jpeg", alt: "" },
+  { src: "https://raw.githubusercontent.com/vp007-dev/community-care-hub/refs/heads/main/src/assets/health3.jpeg", alt: "" },
+  { src: "https://raw.githubusercontent.com/vp007-dev/community-care-hub/refs/heads/main/src/assets/health4.jpeg", alt: "" },
+];
+
 export default function Health() {
   return (
     <Layout>
       {/* Hero Section */}
       <section className="relative min-h-[50vh] sm:min-h-[60vh] overflow-hidden bg-mesh flex items-center">
+        <FloatingElements variant="health" />
         <div className="hidden sm:block absolute top-10 right-20 w-48 sm:w-80 h-48 sm:h-80 bg-gradient-to-br from-emerald-400/20 to-teal-500/20 blob animate-float blur-3xl" />
         <div className="hidden sm:block absolute bottom-10 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-tr from-cyan-400/20 to-blue-500/20 blob animate-float-delayed blur-3xl" />
-        
+        {/* Animated Illustration */}
+        <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[350px] opacity-80">
+          <AnimatedHealthIllustration />
+        </div>
         <div className="container px-4 sm:px-6 lg:px-8 relative py-12 sm:py-20">
           <div className="max-w-4xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
@@ -250,6 +271,28 @@ export default function Health() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section className="py-16 sm:py-20 bg-card">
+        <div className="container px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-10 sm:mb-12"
+          >
+            <span className="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-600 text-sm font-semibold mb-4">
+              <Camera className="inline h-4 w-4 mr-2" />
+              Gallery
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Healthcare in Action</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Moments from our health camps and medical outreach
+            </p>
+          </motion.div>
+          <GalleryGrid images={healthGallery} displayCount={6} />
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-emerald-500 to-teal-600 relative overflow-hidden">
         <div className="absolute inset-0 pattern-dots opacity-10" />
@@ -274,7 +317,7 @@ export default function Health() {
                   Support Healthcare
                 </Link>
               </Button>
-              <Button asChild size="lg" className="rounded-full px-8 bg-white text-emerald-600 hover:bg-white/90 shadow-xl">
+              <Button asChild size="lg" variant="outline" className="rounded-full px-8 border-white/30 text-white hover:bg-white/10">
                 <Link to="/contact">
                   Get in Touch
                 </Link>

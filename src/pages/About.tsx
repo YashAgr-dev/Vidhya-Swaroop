@@ -12,20 +12,21 @@ const inspirations = [
 
 const leadership = {
   presidents: [
-    { name: "Mr. Vikas Agarwal", role: "President", image: "", description: "Mr. Vikas Agrawal provides strategic leadership and financial oversight to the foundation. With expertise in corporate governance and finance, he ensures transparency, compliance, and sustainable growth, supporting the foundation’s long-term mission and social impact." },
-    { name: "Mrs. Monika Agarwal (Secretary)", role: "President", image: "", description: "Ms. Monika Agarwal is a dedicated educationist and social worker focused on foundational education for children from Nursery to Grade 5 and skill development for adults. She works toward holistic community development by promoting education, self-reliance, and confidence across all age groups." },
+    { name: "Mr. Vikas Agarwal", role: "President", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/vikas.jpeg", description: "Mr. Vikas Agrawal provides strategic leadership and financial oversight to the foundation. With expertise in corporate governance and finance, he ensures transparency, compliance, and sustainable growth, supporting the foundation’s long-term mission and social impact." },
+    { name: "Mrs. Monika Agarwal", role: "Secretary", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/MonikaMam.jpeg", description: "Ms. Monika Agarwal is a dedicated educationist and social worker focused on foundational education for children from Nursery to Grade 5 and skill development for adults. She works toward holistic community development by promoting education, self-reliance, and confidence across all age groups." },
   ],
   trustees: [
     { name: "Shivani Agarwal", role: "Trustee", image: "", description: "Ms. Shivani Agrawal is a committed educationist and trustee who brings strong academic knowledge and value-based learning to the foundation. With expertise in Sanskrit and education, she supports moral education, curriculum guidance, and holistic student development." },
-    { name: "Sakshi Agarwal", role: "Trustee", image: "", description: "Ms. Sakshi Agarwal contributes her expertise in human resources to support organizational development and people management within the foundation. She plays an active role in strengthening team coordination, volunteer engagement, and capacity building to ensure smooth and effective operations." },
+    { name: "Sakshi Agarwal", role: "Trustee", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/Sakshi.jpeg", description: "Ms. Sakshi Agarwal contributes her expertise in human resources to support organizational development and people management within the foundation. She plays an active role in strengthening team coordination, volunteer engagement, and capacity building to ensure smooth and effective operations." },
   ],
 };
 
 const supporters = [
+  { name: "Apollo Clinic Agra", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/Apollo.jpg", description: "Apollo Clinic Agra is a multi-speciality outpatient healthcare center offering expert consultations, diagnostics, and preventive health services." },
   { name: "Bharat Vikas Parishad Annapurna", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/Annapurna.png", description: "A leading organization dedicated to national development through education, health, and social service initiatives across India." },
-  { name: "India Rising", image: "", description: "Empowering communities through sustainable development programs, skill training, and grassroots social transformation." },
+  { name: "India Rising", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/indiarising.png", description: "Empowering communities through sustainable development programs, skill training, and grassroots social transformation." },
+  { name: "Seth M.R. Jaipuria School", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/jaipuria.jpg", description: "It emphasizes holistic development through modern teaching methods, co-curricular activities, and a student-centric approach" },
   { name: "Lions Club Supreme", image: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/lionsking.jpeg", description: "International humanitarian organization serving communities through vision care, hunger relief, and youth programs." },
-  { name: "State Bank of India", image: "", description: "India's largest public sector bank, supporting educational initiatives and financial literacy programs nationwide." },
 ];
 
 const purposes = [

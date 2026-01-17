@@ -9,9 +9,28 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: Phone, title: "Phone", value: "+91 95282 19780", href: "tel:+919528219780", color: "from-emerald-500 to-teal-600" },
-  { icon: Mail, title: "Email", value: "info.vidhyaswaroopfoundation@gmail.com", href: "mailto:info.vidhyaswaroopfoundation@gmail.com", color: "from-blue-500 to-indigo-600" },
-  { icon: MapPin, title: "Location", value: "Agra, Uttar Pradesh, India", href: null, color: "from-rose-500 to-pink-600" },
+  { 
+    icon: Phone, 
+    title: "Phone", 
+    value: "+91 95282 19780", 
+    href: "tel:+919528219780", 
+    color: "from-emerald-500 to-teal-600" 
+  },
+  { 
+    icon: Mail, 
+    title: "Email", 
+    value: "info.vidhyaswaroopfoundation@gmail.com", 
+    href: "mailto:info.vidhyaswaroopfoundation@gmail.com", 
+    color: "from-blue-500 to-indigo-600" 
+  },
+  { 
+    icon: MapPin, 
+    title: "Location", 
+    // Updated with the specific registered address
+    value: "94, Basant Vihar Rd, Karbala, Kamla Nagar, Agra, Uttar Pradesh 282005", 
+    href: "https://www.google.com/maps/search/?api=1&query=94+Basant+Vihar+Rd+Karbala+Kamla+Nagar+Agra+Uttar+Pradesh+282005", 
+    color: "from-rose-500 to-pink-600" 
+  },
 ];
 
 export default function Contact() {
@@ -77,7 +96,18 @@ export default function Contact() {
               ))}
 
               <div className="rounded-xl sm:rounded-2xl overflow-hidden border border-border">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114025.94405449268!2d77.93689044999999!3d27.176670349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39740d857c2f41d9%3A0x784aef38a9523b42!2sAgra%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" width="100%" height="150" style={{ border: 0 }} allowFullScreen loading="lazy" title="Location" className="grayscale hover:grayscale-0 transition-all duration-500 sm:h-[200px]" />
+                {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1774.0412734761915!2d78.01364815024411!3d27.21655801693853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397477d0103068fb%3A0x51d427d01c843552!2svidhya%20swaroop%20public%20school!5e0!3m2!1sen!2sin!4v1768672893353!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade */}
+                {/* Updated Map Iframe pointing to Veer Nagar, Dayal Bagh */}
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1774.0412734761915!2d78.01364815024411!3d27.21655801693853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397477d0103068fb%3A0x51d427d01c843552!2svidhya%20swaroop%20public%20school!5e0!3m2!1sen!2sin!4v1768672893353!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="150" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  title="Vidhya Swaroop Foundation Location" 
+                  className="grayscale hover:grayscale-0 transition-all duration-500 sm:h-[200px]" 
+                />
               </div>
             </motion.div>
 

@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
-import { Users, Heart, Monitor, Scissors, Smartphone, Music, Palette, Target, CheckCircle, Sparkles, Briefcase } from "lucide-react";
+import { Users, Heart, Monitor, Scissors, Smartphone, Music, Palette, Target, CheckCircle, Sparkles, Briefcase, Camera } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { AnimatedWomanIllustration } from "@/components/illustrations/AnimatedWomanIllustration";
+import { FloatingElements } from "@/components/illustrations/FloatingElements";
+import { GalleryGrid } from "@/components/GalleryLightbox";
 
 const programs = [
   {
@@ -62,13 +65,26 @@ const outcomes = [
   "Active contributors to society",
 ];
 
+// Placeholder gallery images - replace with actual empowerment program images
+const empowermentGallery = [
+  { src: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/WhatsApp%20Image%202026-01-14%20at%204.37.08%20PM.jpeg", alt: "" },
+  { src: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/WhatsApp%20Image%202026-01-14%20at%204.37.11%20PM.jpeg", alt: "" },
+  { src: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/WhatsApp%20Image%202026-01-14%20at%204.37.13%20PM.jpeg", alt: "" },
+  { src: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/WhatsApp%20Image%202026-01-14%20at%204.37.14%20PM.jpeg", alt: "" },
+  { src: "https://cdn.jsdelivr.net/gh/vp007-dev/community-care-hub@main/src/assets/women.jpeg", alt: "" },
+];
+
 export default function WomenEmpowerment() {
   return (
     <Layout>
       {/* Hero Section */}
       <section className="relative min-h-[50vh] sm:min-h-[60vh] overflow-hidden bg-mesh flex items-center">
+        <FloatingElements variant="empowerment" />
         <div className="hidden sm:block absolute top-10 right-20 w-48 sm:w-80 h-48 sm:h-80 bg-gradient-to-br from-rose-400/20 to-pink-500/20 blob animate-float blur-3xl" />
         <div className="hidden sm:block absolute bottom-10 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-tr from-violet-400/20 to-purple-500/20 blob animate-float-delayed blur-3xl" />
+        <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[320px] opacity-80">
+          <AnimatedWomanIllustration />
+        </div>
         
         <div className="container px-4 sm:px-6 lg:px-8 relative py-12 sm:py-20">
           <div className="max-w-4xl">
@@ -212,6 +228,28 @@ export default function WomenEmpowerment() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section className="py-16 sm:py-20 bg-background">
+        <div className="container px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-10 sm:mb-12"
+          >
+            <span className="inline-block px-4 py-1.5 rounded-full bg-rose-500/10 text-rose-600 text-sm font-semibold mb-4">
+              <Camera className="inline h-4 w-4 mr-2" />
+              Gallery
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Empowerment in Action</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Women learning, growing, and achieving independence
+            </p>
+          </motion.div>
+          <GalleryGrid images={empowermentGallery} displayCount={6} />
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-rose-500 to-pink-600 relative overflow-hidden">
         <div className="absolute inset-0 pattern-dots opacity-10" />
@@ -236,7 +274,7 @@ export default function WomenEmpowerment() {
                   Support Women
                 </Link>
               </Button>
-              <Button asChild size="lg" className="rounded-full px-8 bg-white text-rose-600 hover:bg-white/90 shadow-xl">
+              <Button asChild size="lg" variant="outline" className="rounded-full px-8 border-white/30 text-white hover:bg-white/10">
                 <Link to="/contact">
                   Get in Touch
                 </Link>
